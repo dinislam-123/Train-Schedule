@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel='stylesheet' type='text/css' href='style.css'></script>
+        <script src="https://www.gstatic.com/firebasejs/5.0.3/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <!-- <script src="https://rawgit.com/moment/moment/2.2.1/min/moment.min.js"></script> -->
+        <script src='Train.js'></script> 
+    </head>
+    <body>
+        <div class='row jumbotron'>
+            <div class="col-lg-12">
+                <h1 id="p1">Any Time is Train Time</h1><br>
+                <p id="p2">Choo Choo Chee Chee</p>
+            </div>
+        </div>
+        <!-- The following table will be display train infomation -->
+        
+        <div class="row train-schedule">
+                <!-- input train schedule Panel-->
+            <div class="col-lg-12">
+                <div id="panel-info" class="panel panel-default">
+                    <div class="panel-heading">
+                         <h3 class="panel-title">Current Train Schedule</h3>
+                    </div>
+                    <div class="panel-body-info">
+                        <table class="table-info">
+                            <th>
+                                <tr class="trrow">
+                                    <td>Train Name</td>
+                                    <td>Destination</td>
+                                    <td>Frequency (min)</td>
+                                    <td>Next Arrival</td>
+                                    <td>Minutes Away</td>
+                                </tr>
+                            </th>
+                        </table>
+                        <!-- <Textarea class="panel-body-indo" height: v50></Textarea> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+        <!-- this table info will use to input train information -->
+   
+        
+        <div class="row">
+        <!-- input train schedule Panel-->
+            <div class="col-lg-6">
+                <div class="panel panel-default">
+                    <div class="panel-heading pnl-heading" id="panel-heading">
+                        <h3 class="panel-title">Add Train</h3>
+                    </div>
+
+                    <div class="panel-body">
+                                  
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="name-input">Train Name</label>
+                            <input class="form-control train-name" type="text" id="t-name-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination</label>
+                            <input class="form-control destination" type="text" id="destination-input"  required>
+                        </div>
+                        <div class="form-group">
+                                <label for="train-time">First Train Time (hh:mm malitary time)</label>
+                            <input class="form-control input-time" id="train-time-input" type="time">
+                        </div>
+                        <div class="form-group">
+                            <label for="f-time">Frequency (mm)</label>
+                            <input class="form-control input-frequency" type="number" id="f-time-input"  required></input>
+                        </div>
+                        <button class="btn btn-default" id="add-train-time" type="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
